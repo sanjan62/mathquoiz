@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Front Page for Level Selection -->
+  <div id="level-selection" class="quiz-container">
+    <h1>Choose Difficulty</h1>
+    <div class="options">
+      <button class="option-button" onclick="startQuiz('easy')">Easy</button>
+      <button class="option-button" onclick="startQuiz('medium')">Medium</button>
+      <button class="option-button" onclick="startQuiz('hard')">Hard</button>
+    </div>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quiz" class="quiz-container" style="display: none;">
+    <h1>Math Quiz</h1>
+    <p id="question"></p>
+    <div id="answer-buttons" class="options"></div>
+  </div>
+
+  <!-- Results Section -->
+  <div id="result" class="quiz-container" style="display: none;">
+    <h1>Results</h1>
+    <p id="score"></p>
+    <div id="stars"></div>
+    <!-- Logo Image -->
+    <img id="logo" class="logo" src="images/logo.png" alt="Logo">
+    <button id="restart">Restart Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

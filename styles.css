@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundChange 10s infinite;
+}
+
+/* Quiz Container Styles */
+.quiz-container {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    animation: slideIn 0.7s ease-in-out;
+}
+
+/* Title */
+h1 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+/* Question Text */
+#quiz p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeInText 1s ease-in-out;
+}
+
+/* Options Container */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Option Buttons */
+.option-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: fadeInOptions 0.8s ease-in-out;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-button.correct {
+    background-color: #28a745;
+    animation: correctAnswer 0.5s ease-in-out;
+}
+
+.option-button.wrong {
+    background-color: #dc3545;
+    animation: wrongAnswer 0.5s ease-in-out;
+}
+
+/* Results Section */
+#result {
+    background: #ffefc1;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+#score {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInText 1s ease-in-out;
+}
+
+/* Stars for Performance Rating */
+.stars {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 2rem;
+    margin: 0 5px;
+    animation: starBounce 1s ease-in-out;
+}
+
+/* Logo */
+#logo {
+    width: 100px;    /* Adjust width */
+    height: 100px;   /* Adjust height */
+    margin-top: 20px;
+    object-fit: contain; /* Make sure the image fits within the given size */
+}
+
+/* Animations */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOptions {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes correctAnswer {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes wrongAnswer {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #f6d365, #fda085);
+    }
+    50% {
+        background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    }
+    100% {
+        background: linear-gradient(135deg, #f6d365, #fda085);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes starBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Restart Button */
+#restart {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: fadeInText 0.8s ease-in-out;
+}
+
+#restart:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
